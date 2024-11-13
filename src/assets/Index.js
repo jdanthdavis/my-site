@@ -11,3 +11,7 @@ export const discordIcon = require('../assets/discord-icon.png');
 export const hookIcon = require('../assets/webhook-icon.png');
 export const rlIcon = require('../assets/runelite-logo.png');
 export const statsIcon = require('../assets/stats-icon.png');
+export const linkedInIcon = require('../assets/linkedin-icon.png');
+export const githubIcon = require('../assets/github-icon.png');
+export const resumeIcon = require('../assets/resume-icon.png');
+export const resume = require('../assets/resume/Davis_Justin_Resume.pdf');
