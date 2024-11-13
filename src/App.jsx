@@ -31,7 +31,7 @@ function App() {
         <div>
           <p className="summary">
             Hello, I'm <span className="name">Justin Davis</span>. I'm a
-            full-stack developer <span id="cursor">|</span>
+            software engineer <span id="cursor">|</span>
           </p>
           <a href="#about">Learn more about me ➡</a>
         </div>
@@ -45,10 +45,14 @@ function App() {
               <img src={me} />
               <p className="who">Who am I?</p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                I'm a <span className="name">Software Engineer</span> with a
+                passion for building intuitive, responsive applications that
+                elevate user experience. I love optimizing interfaces, solving
+                complex problems, and delivering polished, impactful
+                solutions.&#32;
+                <span className="name">
+                  Let’s bring something exceptional to life!
+                </span>
               </p>
             </div>
             <div className="skills">
