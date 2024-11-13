@@ -10,6 +10,19 @@ import {
   sassIcon,
 } from './assets/Index';
 import Projects from './projects/projects';
+import Email from './email/email';
+
+let cursor = true;
+const speed = 450;
+setInterval(() => {
+  if (cursor) {
+    document.getElementById('cursor').style.opacity = 0;
+    cursor = false;
+  } else {
+    document.getElementById('cursor').style.opacity = 1;
+    cursor = true;
+  }
+}, speed);
 
 function App() {
   return (
@@ -18,7 +31,7 @@ function App() {
         <div>
           <p className="summary">
             Hello, I'm <span className="name">Justin Davis</span>. I'm a
-            full-stack developer.
+            full-stack developer <span id="cursor">|</span>
           </p>
           <a href="#about">Learn more about me ➡</a>
         </div>
@@ -32,10 +45,10 @@ function App() {
               <img src={me} />
               <p className="who">Who am I?</p>
               <p>
-                I'm a Front-End Developer for ChowNow in Los Angeles, CA. I have
-                serious passion for UI effects, animations and creating
-                intuitive, dynamic user experiences. Let's make something
-                special.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
               </p>
             </div>
             <div className="skills">
@@ -66,7 +79,11 @@ function App() {
           <span className="contact-msg">
             Interested in working together or have a question?
           </span>
+          <Email />
         </div>
+        <a className="return-arrow" href="#home">
+          ⬆
+        </a>
       </section>
     </>
   );

@@ -1,0 +1,32 @@
+.email-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 480px;
+  font-size: 12px;
+}
+
+.email-wrapper {
+  button {
+    margin-top: 15px;
+  }
+}
+
+input {
+  border: 0;
+  margin-bottom: 3px;
+  outline: none;
+  padding: 10px 15px;
+  max-width: 525px;
+}
+
+.email-input {
+  &.error {
+    border: 1.5px solid red;
+  }
+}
+
+textarea {
+  min-height: 150px;
+  margin: 0;
+  padding: 10px 13px;
+}

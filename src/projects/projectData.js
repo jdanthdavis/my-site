@@ -1,10 +1,9 @@
-import hookIcon from '../assets/webhook-icon.png';
-import rlIcon from '../assets/runelite-logo.png';
+import { discordIcon, hookIcon, rlIcon, statsIcon } from '../assets/Index';
 
 export const projectData = [
   {
-    projectTitle: 'custom-dink-webhook',
-    technologyUsed: 'stuff, idk',
+    projectTitle: 'Custom Webhook',
+    technologyUsed: 'JS / Cloudflare Workers',
     gitHub: 'https://github.com/jdanthdavis/custom-dink-webhook',
     img: hookIcon,
   },
@@ -15,27 +14,15 @@ export const projectData = [
     img: rlIcon,
   },
   {
-    projectTitle: 'custom-dink-webhook',
-    technologyUsed: 'stuff, idk',
-    gitHub: 'https://github.com/jdanthdavis/custom-dink-webhook',
-    img: hookIcon,
+    projectTitle: 'Leaderboard Bot',
+    technologyUsed: 'JS / Discord.js / Discord',
+    gitHub: 'https://github.com/jdanthdavis/discord-stats-tracker',
+    img: discordIcon,
   },
   {
-    projectTitle: 'DinkPlugin',
-    technologyUsed: 'Java',
+    projectTitle: 'Stat Tracker',
+    technologyUsed: 'Python / Discord',
     gitHub: 'https://github.com/pajlads/DinkPlugin',
-    img: rlIcon,
-  },
-  {
-    projectTitle: 'custom-dink-webhook',
-    technologyUsed: 'stuff, idk',
-    gitHub: 'https://github.com/jdanthdavis/custom-dink-webhook',
-    img: hookIcon,
-  },
-  {
-    projectTitle: 'DinkPlugin',
-    technologyUsed: 'Java',
-    gitHub: 'https://github.com/pajlads/DinkPlugin',
-    img: rlIcon,
+    img: statsIcon,
   },
 ];
