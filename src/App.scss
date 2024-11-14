@@ -1,26 +1,4 @@
-#root {
-  max-width: 100%;
-  text-align: center;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-h1 {
-  font-size: 36px;
-  letter-spacing: 2px;
-  margin: 5rem 0 2rem 0;
-}
-
-a {
-  color: white;
-}
-
-#cursor {
-  font-size: 32px;
-  margin-left: -15px;
-}
+@import 'typed';
 
 #about,
 #projects {
@@ -56,12 +34,7 @@ a {
   }
 }
 
-.summary {
-  color: white;
-  font-size: 32px;
-}
-
-.name {
+.highlights {
   color: #ff964f;
 }
 
@@ -81,7 +54,7 @@ a {
 .me-container {
   display: flex;
   justify-content: center;
-  max-width: 35%;
+  max-width: 30%;
 
   .me {
     img {
@@ -89,22 +62,6 @@ a {
       height: auto;
       clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
     }
-  }
-}
-
-.skills {
-  min-width: 40%;
-
-  img {
-    width: 90px;
-    height: auto;
-    padding-right: 8px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-  }
-
-  img:hover {
-    transform: scale(1.2);
   }
 }
 
@@ -186,4 +143,37 @@ a {
   display: flex;
   flex-direction: row-reverse;
   padding-right: 75px;
+}
+
+.learn {
+  color: #ff964f;
+}
+
+.skills {
+  min-width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 1px; // to prevent huge spacing between skills
+  justify-content: center;
+}
+
+.typed {
+  color: white;
+  font-size: 32px;
+  @include typed(
+    "Hello, I'm Justin Davis\. I'm a software engineer",
+    (
+      type: 0.1,
+      pause-deleted: 1,
+    ),
+    (
+      iterations: 1,
+      caret-width: 2px,
+      caret-space: 2px,
+    )
+  );
+}
+
+.learn {
+  color: #ff964f;
 }

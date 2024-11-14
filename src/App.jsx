@@ -1,48 +1,24 @@
-import './App.scss';
+import Email from './email/email';
+import Mapper from './mapper/mapper';
+import { skills, projects } from './data';
 import {
   me,
-  reactIcon,
-  jsIcon,
-  nodeIcon,
-  htmlIcon,
-  mongoIcon,
-  reduxIcon,
-  sassIcon,
   githubIcon,
   linkedInIcon,
   resumeIcon,
   resume,
 } from './assets/Index';
-import Projects from './projects/projects';
-import Email from './email/email';
-import { useEffect } from 'react';
+import './App.scss';
 
 function App() {
-  useEffect(() => {
-    let cursor = true;
-    const speed = 450;
-    setInterval(() => {
-      if (cursor) {
-        document.getElementById('cursor').style.opacity = 0;
-        document.getElementById('return-arrow').style.opacity = 0;
-        cursor = false;
-      } else {
-        document.getElementById('cursor').style.opacity = 1;
-        document.getElementById('return-arrow').style.opacity = 1;
-        cursor = true;
-      }
-    }, speed);
-  }, []);
-
   return (
     <>
       <section id="home">
         <div>
-          <p className="summary">
-            Hello, I'm <span className="name">Justin Davis</span>. I'm a
-            software engineer <span id="cursor">|</span>
-          </p>
-          <a href="#about">Learn more about me ➡</a>
+          <p className="typed" />
+          <a className="learn" href="#about">
+            Learn more about me ➡
+          </a>
         </div>
       </section>
       <section id="about">
@@ -75,24 +51,18 @@ function App() {
               <img src={me} />
               <p className="who">Who am I?</p>
               <p>
-                I'm a <span className="name">Software Engineer</span> with a
-                passion for building intuitive, responsive applications that
-                elevate user experience. I love optimizing interfaces, solving
-                complex problems, and delivering polished, impactful
+                I&apos;m a <span className="highlights">Software Engineer</span>{' '}
+                with a passion for building intuitive, responsive applications
+                that elevate user experience. I love optimizing interfaces,
+                solving complex problems, and delivering polished, impactful
                 solutions.&#32;
-                <span className="name">
+                <span className="highlights">
                   Let’s bring something exceptional to life!
                 </span>
               </p>
             </div>
             <div className="skills">
-              <img src={reactIcon} />
-              <img src={nodeIcon} />
-              <img src={jsIcon} />
-              <img src={htmlIcon} />
-              <img src={mongoIcon} />
-              <img src={reduxIcon} />
-              <img src={sassIcon} />
+              <Mapper data={skills} type="skillsData" />
             </div>
           </div>
         </div>
@@ -102,7 +72,7 @@ function App() {
           <h1>PROJECTS</h1>
           <span className="underline" />
           <div className="gallery-container">
-            <Projects />
+            <Mapper data={projects} type="projectData" />
           </div>
         </div>
       </section>

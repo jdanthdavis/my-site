@@ -1,6 +1,23 @@
 :root {
   font-family: roboto Mono;
+  max-width: 100%;
+  text-align: center;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin: 5rem 0 2rem 0;
+}
+
+a {
+  color: white;
+}
+
 
 body {
   margin: 0;
@@ -52,7 +69,6 @@ button:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
 }
-
 
 .roboto-mono-test {
   font-family: "Roboto Mono", monospace;
