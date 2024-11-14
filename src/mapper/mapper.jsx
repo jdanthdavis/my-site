@@ -1,39 +1,46 @@
+import { useState } from 'react';
+import MapperDetails from './mapperDetails/mapperDetails';
 import './mapper.scss';
 
 const Mapper = ({ data, type }) => {
   const dataToMap = data[type];
+  const [selectedDetail, setSelectedDetail] = useState(null);
+
   return dataToMap.map((x, key) => {
     return (
-      <div className="mapper-container" key={key}>
-        <img className={`${x?.sizing}`} src={x.img} />
-        <div className="mapper-info">
-          <span>
-            {x.name}
-            <div className="underline-container">
-              <span className="underline" />
-            </div>
-            <div>
-              {x?.extra ? (
-                <span>
-                  {x?.extra ?? x.extra}
-                  <br />
+      <div key={key} className="mapper-wrapper">
+        <div className={`mapper-container${x.spin ? '-spin' : ''}`}>
+          <img className={`${x?.sizing}`} src={x.img} />
+          <div className="mapper-info">
+            <span>
+              {x.name}
+              <div className="underline-container">
+                <span className="underline" />
+              </div>
+              <div>
+                {x?.extra && (
+                  <span>
+                    {x?.extra ?? x.extra}
+                    <br />
+                  </span>
+                )}
+                <span className="tech">
+                  {type !== 'skillsData' ? x.technologyUsed : x.yearsUsed}
                 </span>
-              ) : (
-                <></>
-              )}
-              <span className="tech">
-                {type !== 'skillsData' ? x.technologyUsed : x.yearsUsed}
-              </span>
-            </div>
-          </span>
-          {type !== 'skillsData' ? (
-            <div className="btn-container">
-              <button onClick={() => window.open(x.gitHub)}>Learn More</button>
-            </div>
-          ) : (
-            <></>
-          )}
+              </div>
+            </span>
+            {type !== 'skillsData' && (
+              <div className="btn-container">
+                <button onClick={() => setSelectedDetail(key)}>
+                  Learn More
+                </button>
+              </div>
+            )}
+          </div>
         </div>
+        {selectedDetail === key && (
+          <MapperDetails setSelectedDetail={setSelectedDetail} details={x} />
+        )}
       </div>
     );
   });

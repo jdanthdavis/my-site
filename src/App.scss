@@ -107,6 +107,16 @@
   }
 }
 
+.projects-container {
+  position: relative;
+  left: -100%;
+  transition: left 1s ease-in-out;
+}
+
+.projects-container.slide {
+  left: 0;
+}
+
 .projects-container,
 .contact-container {
   align-items: center;

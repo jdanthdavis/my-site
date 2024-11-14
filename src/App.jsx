@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from 'react';
 import Email from './email/email';
 import Mapper from './mapper/mapper';
 import { skills, projects } from './data/Index';
@@ -11,6 +12,32 @@ import {
 import './App.scss';
 
 function App() {
+  const [slide, setSlide] = useState(false);
+  const slideInDivRef = useRef(null);
+
+  const checkIfInView = () => {
+    const slideInDiv = slideInDivRef.current;
+    if (!slideInDiv) return;
+
+    const rect = slideInDiv.getBoundingClientRect();
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top < windowHeight * 0.7 && rect.bottom >= windowHeight * 0.7) {
+      setSlide(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkIfInView);
+
+    checkIfInView();
+
+    return () => {
+      window.removeEventListener('scroll', checkIfInView);
+    };
+  }, []);
+
   return (
     <>
       <section id="home">
@@ -68,7 +95,10 @@ function App() {
         </div>
       </section>
       <section id="projects">
-        <div className="projects-container">
+        <div
+          ref={slideInDivRef}
+          className={`projects-container ${slide ? 'slide' : ''}`}
+        >
           <h1>PROJECTS</h1>
           <span className="underline" />
           <div className="gallery-container">
