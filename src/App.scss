@@ -23,8 +23,7 @@ a {
 }
 
 #about,
-#projects,
-#contact {
+#projects {
   padding-bottom: 10rem;
 }
 
@@ -48,7 +47,7 @@ a {
 
 #contact {
   width: 100%;
-  height: 40vh;
+  padding-bottom: 1rem;
 }
 
 #home {
@@ -160,6 +159,8 @@ a {
 }
 
 .contact-container {
+  padding-bottom: 2rem;
+
   h1 {
     color: white;
   }
@@ -177,8 +178,12 @@ a {
 .return-arrow {
   color: #ff964f;
   font-size: 60px;
-  float: right;
-  padding-right: 15px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 75px;
 }
