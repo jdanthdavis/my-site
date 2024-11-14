@@ -10,7 +10,8 @@
   }
 }
 
-.mapper-container {
+.mapper-container,
+.mapper-container-spin {
   position: relative;
   padding: 5px;
 
@@ -25,16 +26,6 @@
       padding-bottom: 8px;
       padding-top: 8px;
     }
-  }
-
-  img:not(:hover) {
-    opacity: 1;
-    transition: opacity 0.3s;
-  }
-
-  img:hover {
-    transition: opacity 0.3s;
-    opacity: 0;
   }
 }
 
@@ -51,15 +42,77 @@
   color: #ff964f;
 }
 
+// this is fading the img out on hover
 .mapper-container:hover img {
   opacity: 0;
+  transition: opacity 0.3s;
 }
 
+// this is the img fading in when leaving a hover
+.mapper-container:not(hover) img {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+// this is the text fading in on hover
 .mapper-container:hover .mapper-info {
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
+}
+
+// this is the text fading in on hover for a spin img
+.mapper-container-spin:hover .mapper-info {
+  opacity: 1;
+  transition: opacity 2.2s;
+}
+
+// this is the text fading out when leaving a hover
+.mapper-container:not(hover) .mapper-info,
+.mapper-container-spin:not(hover) .mapper-info {
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 
 .btn-container {
   padding-top: 2rem;
+}
+
+@keyframes growAndSpin {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes fadeAndSpin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInAndSpin {
+  0% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+// for spin imgs
+.mapper-container-spin:hover img {
+  animation: fadeAndSpin 2s forwards;
+}
+
+.mapper-container-spin:not(hover) img {
+  animation: fadeInAndSpin 2s forwards;
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './mapperDetails.scss';
 
-const MapperDetails = ({ key, setSelectedDetail, details }) => {
+const MapperDetails = ({ setSelectedDetail, details }) => {
   const [isClosing, setIsClosing] = useState(false);
 
   const handleClose = () => {
@@ -17,7 +17,6 @@ const MapperDetails = ({ key, setSelectedDetail, details }) => {
 
   return (
     <div
-      key={key}
       className={`modal-backdrop ${isClosing ? 'fade-out' : ''}`}
       onClick={handleOutOoo}
     >

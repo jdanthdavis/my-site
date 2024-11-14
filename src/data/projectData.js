@@ -7,6 +7,7 @@ export const projectData = [
     link: 'https://github.com/jdanthdavis/custom-dink-webhook',
     extra: '',
     img: hookIcon,
+    spin: true,
   },
   {
     name: 'DinkPlugin',

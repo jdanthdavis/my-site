@@ -9,7 +9,7 @@ const Mapper = ({ data, type }) => {
   return dataToMap.map((x, key) => {
     return (
       <div key={key} className="mapper-wrapper">
-        <div className="mapper-container">
+        <div className={`mapper-container${x.spin ? '-spin' : ''}`}>
           <img className={`${x?.sizing}`} src={x.img} />
           <div className="mapper-info">
             <span>
@@ -39,11 +39,7 @@ const Mapper = ({ data, type }) => {
           </div>
         </div>
         {selectedDetail === key && (
-          <MapperDetails
-            key={key}
-            setSelectedDetail={setSelectedDetail}
-            details={x}
-          />
+          <MapperDetails setSelectedDetail={setSelectedDetail} details={x} />
         )}
       </div>
     );
