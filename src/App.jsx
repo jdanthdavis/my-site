@@ -1,6 +1,6 @@
 import Email from './email/email';
 import Mapper from './mapper/mapper';
-import { skills, projects } from './data';
+import { skills, projects } from './data/Index';
 import {
   me,
   githubIcon,
