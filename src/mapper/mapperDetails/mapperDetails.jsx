@@ -23,16 +23,11 @@ const MapperDetails = ({ setSelectedDetail, details }) => {
       <div className={`modal-content ${isClosing ? 'scale-out' : ''}`}>
         <div className="title-container">
           <div className="modal-title">{details.name}</div>
-          <div className="modal-subtitle">Subtitle</div>
+          <div className="modal-subtitle">{details.technologyUsed}</div>
         </div>
         <span className="underline" />
 
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
+        <p>{details.desc}</p>
         <div className="modal-btn-container">
           {details.link ? (
             <button
@@ -40,12 +35,11 @@ const MapperDetails = ({ setSelectedDetail, details }) => {
                 window.open(details.link);
               }}
             >
-              View Repo
+              {details.name !== 'JD Pitchers' ? <>View Repo</> : <>View Site</>}
             </button>
           ) : (
             <div />
           )}
-
           <button onClick={handleClose}>×</button>
         </div>
       </div>
