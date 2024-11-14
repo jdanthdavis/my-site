@@ -10,13 +10,21 @@
   }
 }
 
-.project-container {
+.mapper-container {
   position: relative;
   padding: 5px;
 
   img {
     width: 250px;
     height: auto;
+
+    &.skill {
+      width: 90px;
+      height: auto;
+      padding-right: 8px;
+      padding-bottom: 8px;
+      padding-top: 8px;
+    }
   }
 
   img:not(:hover) {
@@ -30,7 +38,7 @@
   }
 }
 
-.project-info {
+.mapper-info {
   position: absolute;
   top: 35%;
   left: 0;
@@ -43,11 +51,11 @@
   color: #ff964f;
 }
 
-.project-container:hover img {
+.mapper-container:hover img {
   opacity: 0;
 }
 
-.project-container:hover .project-info {
+.mapper-container:hover .mapper-info {
   opacity: 1;
   transition: opacity 0.3s;
 }
