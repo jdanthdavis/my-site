@@ -15,22 +15,25 @@ import {
 } from './assets/Index';
 import Projects from './projects/projects';
 import Email from './email/email';
-
-let cursor = true;
-const speed = 450;
-setInterval(() => {
-  if (cursor) {
-    document.getElementById('cursor').style.opacity = 0;
-    document.getElementById('return-arrow').style.opacity = 0;
-    cursor = false;
-  } else {
-    document.getElementById('cursor').style.opacity = 1;
-    document.getElementById('return-arrow').style.opacity = 1;
-    cursor = true;
-  }
-}, speed);
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    let cursor = true;
+    const speed = 450;
+    setInterval(() => {
+      if (cursor) {
+        document.getElementById('cursor').style.opacity = 0;
+        document.getElementById('return-arrow').style.opacity = 0;
+        cursor = false;
+      } else {
+        document.getElementById('cursor').style.opacity = 1;
+        document.getElementById('return-arrow').style.opacity = 1;
+        cursor = true;
+      }
+    }, speed);
+  }, []);
+
   return (
     <>
       <section id="home">
@@ -112,9 +115,11 @@ function App() {
           </span>
           <Email />
         </div>
-        <a className="return-arrow" id="return-arrow" href="#home">
-          ⬆
-        </a>
+        <div className="arrow-container">
+          <a className="return-arrow" id="return-arrow" href="#home">
+            ⬆
+          </a>
+        </div>
       </section>
     </>
   );
