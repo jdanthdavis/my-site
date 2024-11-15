@@ -53,15 +53,23 @@
 
 .me-container {
   display: flex;
-  justify-content: center;
-  max-width: 30%;
+  max-width: 900px;
 
   .me {
+    max-width: 500px;
+
     img {
       width: 230px;
       height: auto;
       clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
     }
+  }
+}
+
+@media (max-width: 926px) {
+  .me-container {
+    flex-direction: column;
+    padding: 1rem;
   }
 }
 
@@ -92,6 +100,10 @@
   max-width: 900px;
   flex-direction: row;
   justify-content: center;
+
+  &.skills {
+    max-width: 500px;
+  }
 }
 
 .about-container {
@@ -159,21 +171,13 @@
   color: #ff964f;
 }
 
-.skills {
-  min-width: 55%;
-  display: flex;
-  flex-wrap: wrap;
-  max-height: 1px; // to prevent huge spacing between skills
-  justify-content: center;
-}
-
 .typed {
   color: white;
   font-size: 32px;
   @include typed(
     "Hello, I'm Justin Davis\. I'm a software engineer",
     (
-      type: 0.1,
+      type: 0.07,
       pause-deleted: 1,
     ),
     (
