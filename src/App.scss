@@ -115,6 +115,22 @@
   }
 }
 
+/* For Retina Displays (2x or higher pixel density) */
+@media only screen and (min-resolution: 2dppx) {
+  /* Custom styles for high-DPI screens */
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    flex-direction: row;
+    justify-content: center;
+
+    &.skills {
+      max-width: 350px;
+    }
+  }
+}
+
 .about-container {
   align-items: center;
   display: flex;

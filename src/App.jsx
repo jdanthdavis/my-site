@@ -38,6 +38,39 @@ function App() {
     };
   }, []);
 
+  document.addEventListener('DOMContentLoaded', () => {
+    // Function to update the favicon based on color scheme
+    const updateFavicon = () => {
+      const favicon = document.getElementById('favicon');
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        favicon.href = '/code.png'; // Change to dark mode favicon
+      } else {
+        favicon.href = '/vite.svg'; // Change to light mode favicon
+      }
+    };
+
+    // Update the favicon on initial load
+    updateFavicon();
+
+    // Listen for changes to the color scheme preference
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', updateFavicon);
+
+    // Handle tab focus and blur (visibility change)
+    const favicon = document.getElementById('favicon');
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        // Add the bounce effect when the tab is not focused
+        favicon.classList.add('bouncing');
+      } else {
+        // Remove the bounce effect when the tab is focused again
+        favicon.classList.remove('bouncing');
+      }
+    });
+  });
+
   return (
     <>
       <section id="home">
