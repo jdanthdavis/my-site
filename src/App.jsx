@@ -88,7 +88,7 @@ function App() {
                 </span>
               </p>
             </div>
-            <div className="skills">
+            <div className="gallery-container skills">
               <Mapper data={skills} type="skillsData" />
             </div>
           </div>
