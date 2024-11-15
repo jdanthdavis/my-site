@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <section id="home">
-        <div>
+        <div className="typed-wrapper">
           <p className="typed" />
           <a className="learn" href="#about">
             Learn more about me ➡
@@ -114,10 +114,8 @@ function App() {
             Interested in working together or have a question?
           </span>
           <Email />
-        </div>
-        <div className="arrow-container">
           <a className="return-arrow" id="return-arrow" href="#home">
-            ⬆
+            <span className="arrow arrow-top" />
           </a>
         </div>
       </section>
