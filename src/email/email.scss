@@ -1,11 +1,16 @@
 .email-form {
   display: flex;
   flex-direction: column;
-  min-width: 480px;
+  // min-width: 480px;
   font-size: 12px;
 }
 
 .email-wrapper {
+  width: 100%;
+  max-width: 20%;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
   button {
     margin-top: 15px;
   }
