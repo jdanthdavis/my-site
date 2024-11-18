@@ -29,18 +29,10 @@ const MapperDetails = ({ setSelectedDetail, details }) => {
 
         <p>{details.desc}</p>
         <div className="modal-btn-container">
-          {details.link ? (
-            <button
-              onClick={() => {
-                window.open(details.link);
-              }}
-            >
-              {details.name !== 'JD Pitchers' ? <>View Repo</> : <>View Site</>}
-            </button>
-          ) : (
-            <div />
-          )}
-          <button onClick={handleClose}>×</button>
+          <div className="left-btns">{details.btn}</div>
+          <button className="close-btn" onClick={handleClose}>
+            ×
+          </button>
         </div>
       </div>
     </div>
