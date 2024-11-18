@@ -16,3 +16,4 @@ export const githubIcon = require('../assets/github-icon.png');
 export const resumeIcon = require('../assets/resume-icon.png');
 export const resume = require('../assets/resume/Davis_Justin_Resume.pdf');
 export const jdPitcherIcon = require('../assets/jdpitcher-icon.png');
+export const theLeviathan = require('../assets/the-leviathan.png');
