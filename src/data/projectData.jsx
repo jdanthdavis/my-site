@@ -28,7 +28,7 @@ export const projectData = [
   {
     name: 'DinkPlugin',
     technologyUsed: 'Java',
-    desc: 'Integrated total points tracking and tier progress to enhance combat achievement notifications, implemented multi-tier progress display, and expanded unit tests to improve reliability and coverage.',
+    desc: 'Integrated total points tracking and tier progress to enhance combat achievement notifications, implemented multi-tier progress display, and expanded unit tests to improve reliability and coverage. Over 20,000 active installs.',
     extra: 'Open-Source Contributor',
     img: rlIcon,
     btn: (
