@@ -10,6 +10,7 @@ const Mapper = ({ data, type }) => {
     return (
       <div key={key} className="mapper-wrapper">
         <div className={`mapper-container${x.spin ? '-spin' : ''}`}>
+          {/* <div className="mapper-container"> */}
           <img className={`${x?.sizing}`} src={x.img} />
           <div className="mapper-info">
             <span>
