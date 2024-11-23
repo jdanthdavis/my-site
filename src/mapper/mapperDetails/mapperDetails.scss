@@ -95,6 +95,14 @@
   }
 }
 
+@media screen and (max-width: 926px) {
+  button {
+    font-size: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
 .title-container {
   .modal-title {
     font-size: 32px;

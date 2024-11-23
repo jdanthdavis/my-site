@@ -14,7 +14,6 @@ export const projectData = [
     desc: 'A JavaScript and Cloudflare Workers-based tool that handles over 10,000 requests monthly, with payload routing for more than 100 active users.',
     extra: '',
     img: hookIcon,
-    spin: true,
     btn: (
       <button
         onClick={() =>
@@ -45,6 +44,7 @@ export const projectData = [
     desc: 'Built with JavaScript and Discord.js, this bot generates a formatted leaderboard using user-submitted data, allowing for seamless tracking and display of rankings within Discord.',
     extra: '',
     img: discordIcon,
+    spin: true,
     btn: (
       <button
         onClick={() =>
