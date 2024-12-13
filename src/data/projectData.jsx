@@ -48,7 +48,7 @@ export const projectData = [
     btn: (
       <button
         onClick={() =>
-          window.open('https://github.com/jdanthdavis/discord-stats-tracker')
+          window.open('https://github.com/jdanthdavis/watermelon-bot')
         }
       >
         View Repo
@@ -63,7 +63,9 @@ export const projectData = [
     img: statsIcon,
     btn: (
       <button
-        onClick={() => window.open('https://github.com/pajlads/DinkPlugin')}
+        onClick={() =>
+          window.open('https://github.com/jdanthdavis/dink-donk-bot')
+        }
       >
         View Repo
       </button>
