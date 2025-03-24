@@ -1,4 +1,4 @@
-@import 'typed';
+@import "typed";
 
 #about,
 #projects {
@@ -234,7 +234,7 @@
   color: white;
   font-size: 32px;
   @include typed(
-    "Hello, I'm Justin Davis\. I'm a software engineer",
+    "Hello, I'm Justin Davis\. I'm a solution engineer",
     (
       type: 0.07,
       pause-deleted: 1,

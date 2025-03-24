@@ -1,15 +1,15 @@
-import { useEffect, useState, useRef } from 'react';
-import Email from './email/email';
-import Mapper from './mapper/mapper';
-import { skills, projects } from './data/Index';
+import { useEffect, useState, useRef } from "react";
+import Email from "./email/email";
+import Mapper from "./mapper/mapper";
+import { skills, projects } from "./data/Index";
 import {
   me,
   githubIcon,
   linkedInIcon,
   resumeIcon,
   resume,
-} from './assets/Index';
-import './App.scss';
+} from "./assets/Index";
+import "./App.scss";
 
 function App() {
   const [slide, setSlide] = useState(false);
@@ -29,23 +29,23 @@ function App() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', checkIfInView);
+    window.addEventListener("scroll", checkIfInView);
 
     checkIfInView();
 
     return () => {
-      window.removeEventListener('scroll', checkIfInView);
+      window.removeEventListener("scroll", checkIfInView);
     };
   }, []);
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Function to update the favicon based on color scheme
     const updateFavicon = () => {
-      const favicon = document.getElementById('favicon');
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        favicon.href = '/code.png'; // Change to dark mode favicon
+      const favicon = document.getElementById("favicon");
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        favicon.href = "/code.png"; // Change to dark mode favicon
       } else {
-        favicon.href = '/vite.svg'; // Change to light mode favicon
+        favicon.href = "/vite.svg"; // Change to light mode favicon
       }
     };
 
@@ -54,19 +54,19 @@ function App() {
 
     // Listen for changes to the color scheme preference
     window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', updateFavicon);
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", updateFavicon);
 
     // Handle tab focus and blur (visibility change)
-    const favicon = document.getElementById('favicon');
+    const favicon = document.getElementById("favicon");
 
-    document.addEventListener('visibilitychange', () => {
+    document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
         // Add the bounce effect when the tab is not focused
-        favicon.classList.add('bouncing');
+        favicon.classList.add("bouncing");
       } else {
         // Remove the bounce effect when the tab is focused again
-        favicon.classList.remove('bouncing');
+        favicon.classList.remove("bouncing");
       }
     });
   });
@@ -90,19 +90,19 @@ function App() {
               src={linkedInIcon}
               onClick={() =>
                 window.open(
-                  'https://www.linkedin.com/in/jd-anthdavis/',
-                  '_blank'
+                  "https://www.linkedin.com/in/jd-anthdavis/",
+                  "_blank"
                 )
               }
             />
             <img
               src={resumeIcon}
-              onClick={() => window.open(resume, '_blank')}
+              onClick={() => window.open(resume, "_blank")}
             />
             <img
               src={githubIcon}
               onClick={() =>
-                window.open('https://github.com/jdanthdavis', '_blank')
+                window.open("https://github.com/jdanthdavis", "_blank")
               }
             />
           </div>
@@ -111,13 +111,13 @@ function App() {
               <img src={me} />
               <p className="who">Who am I?</p>
               <p>
-                I&apos;m a <span className="highlights">Software Engineer</span>{' '}
-                with a passion for building intuitive, responsive applications
-                that elevate user experience. I love optimizing interfaces,
-                solving complex problems, and delivering polished, impactful
-                solutions.&#32;
+                I&apos;m a <span className="highlights">Solution Engineer</span>{" "}
+                with a passion for designing secure, high-performance solutions
+                that bridge technology and business needs. I love solving
+                complex security challenges, optimizing systems, and delivering
+                impactful, efficient solutions.{" "}
                 <span className="highlights">
-                  Let’s bring something exceptional to life!
+                  Let’s elevate cybersecurity together!{" "}
                 </span>
               </p>
             </div>
@@ -130,7 +130,7 @@ function App() {
       <section id="projects">
         <div
           ref={slideInDivRef}
-          className={`projects-container ${slide ? 'slide' : ''}`}
+          className={`projects-container ${slide ? "slide" : ""}`}
         >
           <h1>PROJECTS</h1>
           <span className="underline" />
