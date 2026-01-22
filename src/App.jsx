@@ -10,6 +10,7 @@ import {
   resume,
 } from "./assets/Index";
 import "./App.scss";
+import BubbleGrid from "./bubble/BubbleGrid";
 
 function App() {
   const [slide, setSlide] = useState(false);
@@ -91,7 +92,7 @@ function App() {
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/jd-anthdavis/",
-                  "_blank"
+                  "_blank",
                 )
               }
             />
@@ -109,22 +110,28 @@ function App() {
           <div className="me-container">
             <div className="me">
               <img src={me} />
-              <p className="who">Who am I?</p>
+              <p className="who">
+                Who am <span className="highlights">I?</span>
+              </p>
               <p>
-                I&apos;m a <span className="highlights">Solution Engineer</span>{" "}
-                with a passion for designing secure, high-performance solutions
-                that bridge technology and business needs. I love solving
-                complex security challenges, optimizing systems, and delivering
-                impactful, efficient solutions.{" "}
-                <span className="highlights">
-                  Let’s elevate cybersecurity together!{" "}
-                </span>
+                My name is Justin Davis and I'm a{" "}
+                <span className="highlights">Solutions Engineer</span>.
+                Originally, I was a software engineer with a focus on the
+                front-end. Over time, I discovered my passion for being the
+                bridge between technology and business needs.
               </p>
             </div>
             <div className="gallery-container skills">
               <Mapper data={skills} type="skillsData" />
             </div>
           </div>
+        </div>
+      </section>
+      <section id="interests">
+        <div className="interests-container">
+          <h1>INTERESTS</h1>
+          <span className="underline" />
+          <BubbleGrid />
         </div>
       </section>
       <section id="projects">

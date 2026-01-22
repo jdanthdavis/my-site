@@ -1,0 +1,133 @@
+.bubble-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  align-content: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  // Random rotation and offset for stacked effect
+  &:nth-child(1) {
+    transform: rotate(-3deg) translateY(-10px);
+  }
+
+  &:nth-child(2) {
+    transform: rotate(2deg) translateY(5px);
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-2deg) translateY(-5px);
+  }
+
+  &:nth-child(4) {
+    transform: rotate(3deg) translateY(8px);
+  }
+
+  &:nth-child(5) {
+    transform: rotate(-1deg) translateY(-8px);
+  }
+
+  // Theme colors - Pastel
+  &.bubble-gardening {
+    background: linear-gradient(135deg, #b3e5a8 0%, #d4f1d4 100%);
+    color: #2d5a2d;
+  }
+
+  &.bubble-photography {
+    background: linear-gradient(135deg, #b3d9ff 0%, #d9e6ff 100%);
+    color: #1a3a6b;
+  }
+
+  &.bubble-cars {
+    background: linear-gradient(135deg, #ffccb3 0%, #ffe6cc 100%);
+    color: #663300;
+  }
+
+  &.bubble-hockey {
+    background: linear-gradient(135deg, #b3e5ff 0%, #d9f2ff 100%);
+    color: #1a5073;
+  }
+
+  &.bubble-flowers {
+    background: linear-gradient(135deg, #ffb3d9 0%, #ffd9e6 100%);
+    color: #663366;
+  }
+
+  &.bubble-carnivorous {
+    background: linear-gradient(135deg, #d4a574 0%, #e6c9a8 100%);
+    color: #4a3728;
+  }
+
+  &.bubble-aquascaping {
+    background: linear-gradient(135deg, #a8d9e8 0%, #c9e6f0 100%);
+    color: #1a5073;
+  }
+
+  // Size variations
+  &.bubble-small {
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+  }
+
+  &.bubble-medium {
+    width: 140px;
+    height: 140px;
+    font-size: 14px;
+  }
+
+  &.bubble-large {
+    width: 180px;
+    height: 180px;
+    font-size: 16px;
+  }
+}
+
+.bubble-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  line-height: 1.4;
+
+  p {
+    margin: 0;
+  }
+}
+
+.bubble-emoji {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+
+.bubble-label {
+  margin: 0;
+}
+
+

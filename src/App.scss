@@ -1,6 +1,7 @@
 @import "typed";
 
 #about,
+#interests,
 #projects {
   padding-bottom: 10rem;
 }
@@ -66,7 +67,7 @@
     img {
       width: 230px;
       height: auto;
-      clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+      border-radius: 15px;
     }
   }
 }
@@ -134,7 +135,8 @@
   }
 }
 
-.about-container {
+.about-container,
+.interests-container {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -234,7 +236,7 @@
   color: white;
   font-size: 32px;
   @include typed(
-    "Hello, I'm Justin Davis\. I'm a solution engineer",
+    "Hello, I'm Justin Davis\. I'm a Solutions Engineer.",
     (
       type: 0.07,
       pause-deleted: 1,
