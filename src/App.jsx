@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import Email from "./email/email";
 import Mapper from "./mapper/mapper";
-import { skills, projects } from "./data/Index";
+import { projects } from "./data/Index";
 import {
   me,
   githubIcon,
@@ -10,6 +10,7 @@ import {
   resume,
 } from "./assets/Index";
 import "./App.scss";
+import SkillsTabs from "./skills/SkillsTabs";
 
 function App() {
   const [slide, setSlide] = useState(false);
@@ -85,45 +86,34 @@ function App() {
         <div className="about-container">
           <h1>ABOUT</h1>
           <span className="underline" />
-          <div className="socials-container">
-            <img
-              src={linkedInIcon}
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/jd-anthdavis/",
-                  "_blank"
-                )
-              }
-            />
-            <img
-              src={resumeIcon}
-              onClick={() => window.open(resume, "_blank")}
-            />
-            <img
-              src={githubIcon}
-              onClick={() =>
-                window.open("https://github.com/jdanthdavis", "_blank")
-              }
-            />
-          </div>
           <div className="me-container">
-            <div className="me">
-              <img src={me} />
-              <p className="who">Who am I?</p>
-              <p>
-                I&apos;m a <span className="highlights">Solution Engineer</span>{" "}
-                with a passion for designing secure, high-performance solutions
-                that bridge technology and business needs. I love solving
-                complex security challenges, optimizing systems, and delivering
-                impactful, efficient solutions.{" "}
-                <span className="highlights">
-                  Let’s elevate cybersecurity together!{" "}
-                </span>
-              </p>
+            <div className="me-with-socials">
+              <div className="me">
+                <img src={me} />
+              </div>
+              <div className="socials-container">
+              <img
+                src={linkedInIcon}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/jd-anthdavis/",
+                    "_blank",
+                  )
+                }
+              />
+              <img
+                src={resumeIcon}
+                onClick={() => window.open(resume, "_blank")}
+              />
+              <img
+                src={githubIcon}
+                onClick={() =>
+                  window.open("https://github.com/jdanthdavis", "_blank")
+                }
+              />
             </div>
-            <div className="gallery-container skills">
-              <Mapper data={skills} type="skillsData" />
             </div>
+            <SkillsTabs />
           </div>
         </div>
       </section>

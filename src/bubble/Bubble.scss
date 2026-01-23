@@ -1,0 +1,196 @@
+.bubble-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  align-content: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+
+  &.is-image-true {
+    cursor: default;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &:nth-child(1) {
+    transform: rotate(-3deg) translateY(-10px);
+  }
+
+  &:nth-child(2) {
+    transform: rotate(2deg) translateY(5px);
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-2deg) translateY(-5px);
+  }
+
+  &:nth-child(4) {
+    transform: rotate(3deg) translateY(8px);
+  }
+
+  &:nth-child(5) {
+    transform: rotate(-1deg) translateY(-8px);
+  }
+
+  &.bubble-medium {
+    width: 140px;
+    height: 140px;
+    font-size: 14px;
+  }
+
+  &.bubble-large {
+    width: 180px;
+    height: 180px;
+    font-size: 16px;
+  }
+
+  &.bubble-react {
+    background: linear-gradient(135deg, #a2e7ff 0%, #6fcfff 100%);
+    color: #0d2b3e;
+  }
+
+  &.bubble-js {
+    background: linear-gradient(135deg, #fff9a2 0%, #fff08f 100%);
+    color: #333300;
+  }
+
+  &.bubble-node {
+    background: linear-gradient(135deg, #a2f0b1 0%, #6fdc8f 100%);
+    color: #2b5c28;
+  }
+
+  &.bubble-mongo {
+    background: linear-gradient(135deg, #b3ffcc 0%, #8fffaa 100%);
+    color: #1a5073;
+  }
+
+  &.bubble-aws {
+    background: linear-gradient(135deg, #ffdab3 0%, #ffc78f 100%);
+    color: #663300;
+  }
+
+  &.bubble-azure {
+    background: linear-gradient(135deg, #b3d9ff 0%, #80bfff 100%);
+    color: #1a3a6b;
+  }
+
+  &.bubble-api {
+    background: linear-gradient(135deg, #d9ffb3 0%, #bfff80 100%);
+    color: #336600;
+  }
+
+  &.bubble-typescript {
+    background: linear-gradient(135deg, #b3e0ff 0%, #80cfff 100%);
+    color: #0d2b3e;
+  }
+
+  &.bubble-gardening {
+    background: linear-gradient(135deg, #b3e5a8 0%, #d4f1d4 100%);
+    color: #2d5a2d;
+  }
+
+  &.bubble-photography {
+    background: linear-gradient(135deg, #b3d9ff 0%, #d9e6ff 100%);
+    color: #1a3a6b;
+  }
+
+  &.bubble-cars {
+    background: linear-gradient(135deg, #ffccb3 0%, #ffe6cc 100%);
+    color: #663300;
+  }
+
+  &.bubble-hockey {
+    background: linear-gradient(135deg, #b3e5ff 0%, #d9f2ff 100%);
+    color: #1a5073;
+  }
+
+  &.bubble-flowers {
+    background: linear-gradient(135deg, #ffb3d9 0%, #ffd9e6 100%);
+    color: #663366;
+  }
+
+  &.bubble-carnivorous {
+    background: linear-gradient(135deg, #d4a574 0%, #e6c9a8 100%);
+    color: #4a3728;
+  }
+
+  &.bubble-aquascaping {
+    background: linear-gradient(135deg, #a8d9e8 0%, #c9e6f0 100%);
+    color: #1a5073;
+  }
+}
+
+.bubble-circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.bubble-medium,
+  &.bubble-large {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .bubble-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.bubble-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4;
+
+  p {
+    margin: 0;
+  }
+}
+
+.bubble-emoji {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+
+.bubble-emoji-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.bubble-label {
+  margin: 0;
+  color: inherit;
+}

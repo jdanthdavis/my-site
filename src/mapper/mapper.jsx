@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import MapperDetails from './mapperDetails/mapperDetails';
-import './mapper.scss';
+import { useState } from "react";
+import MapperDetails from "./mapperDetails/mapperDetails";
+import "./mapper.scss";
 
 const Mapper = ({ data, type }) => {
   const dataToMap = data[type];
@@ -9,8 +9,7 @@ const Mapper = ({ data, type }) => {
   return dataToMap.map((x, key) => {
     return (
       <div key={key} className="mapper-wrapper">
-        <div className={`mapper-container${x.spin ? '-spin' : ''}`}>
-          {/* <div className="mapper-container"> */}
+        <div className={`mapper-container${x.spin ? "-spin" : ""}`}>
           <img className={`${x?.sizing}`} src={x.img} />
           <div className="mapper-info">
             <span>
@@ -26,11 +25,11 @@ const Mapper = ({ data, type }) => {
                   </span>
                 )}
                 <span className="tech">
-                  {type !== 'skillsData' ? x.technologyUsed : x.yearsUsed}
+                  {type !== "skillsData" ? x.technologyUsed : x.yearsUsed}
                 </span>
               </div>
             </span>
-            {type !== 'skillsData' && (
+            {type !== "skillsData" && (
               <div className="btn-container">
                 <button onClick={() => setSelectedDetail(key)}>
                   Learn More
