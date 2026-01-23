@@ -1,9 +1,20 @@
+@use "./colors" as *;
 @import "typed";
 
 #about,
+#contact,
+#home,
+#projects {
+  color: $color-text;
+}
+
 #interests,
 #projects {
   padding-bottom: 10rem;
+}
+
+#about {
+  background-color: $color-background;
 }
 
 #home {
@@ -17,11 +28,11 @@
 
 #contact,
 #home {
-  background-color: black;
+  background-color: $color-secondary;
 }
 
 #projects {
-  background-color: #e8e8e8;
+  background-color: $color-background;
 }
 
 #contact {
@@ -36,17 +47,11 @@
 }
 
 .highlights {
-  color: #ff964f;
-}
-
-.footer-container {
-  a {
-    color: black;
-  }
+  color: $color-highlight;
 }
 
 .underline {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $color-text-muted;
   min-width: 5rem;
   display: block;
   margin-bottom: 5rem;
@@ -58,18 +63,39 @@
 
 .me-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   max-width: 900px;
+  gap: 40px;
+
+  .me-with-socials {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+  }
 
   .me {
-    max-width: 500px;
+    max-width: 250px;
+    width: 100%;
 
     img {
-      width: 230px;
+      width: 250px;
       height: auto;
       border-radius: 15px;
     }
   }
+
+  .gallery-container.skills {
+    width: 100%;
+  }
+}
+
+.me-with-socials {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 926px) {
@@ -86,22 +112,19 @@
 
 .socials-container {
   display: flex;
-  justify-content: space-evenly;
-  min-width: 20%;
-  padding-bottom: 5rem;
-  min-width: 40%;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 
   img {
-    width: 90px;
-    height: auto;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
   }
 
   img:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -170,22 +193,22 @@
 .contact-container {
   padding-bottom: 2rem;
 
-  h1 {
-    color: white;
-  }
+  // h1 {
+  //   color: rgb(122, 10, 10);
+  // }
 
   .underline {
-    border-bottom: 1px solid white;
+    margin-bottom: 2rem;
   }
 }
 
 .contact-msg {
-  color: #ff964f;
-  padding-bottom: 1rem;
+  color: $color-primary-dark;
+  padding-bottom: 2rem;
 }
 
 .return-arrow {
-  color: #ff964f;
+  color: $color-primary-dark;
   cursor: pointer;
   text-decoration: none;
   width: 2rem;
@@ -200,8 +223,8 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  border-top: 2px solid #ff964f;
-  border-right: 2px solid #ff964f;
+  border-top: 2px solid $color-primary-dark;
+  border-right: 2px solid $color-primary-dark;
 }
 
 .arrow-top {
@@ -229,11 +252,11 @@
 }
 
 .learn {
-  color: #ff964f;
+  color: $color-primary-dark;
 }
 
 .typed {
-  color: white;
+  color: $color-text;
   font-size: 32px;
   @include typed(
     "Hello, I'm Justin Davis\. I'm a Solutions Engineer.",
@@ -247,8 +270,4 @@
       caret-space: 2px,
     )
   );
-}
-
-.learn {
-  color: #ff964f;
 }

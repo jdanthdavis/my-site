@@ -1,3 +1,5 @@
+@import "../colors";
+
 .underline-container {
   display: flex;
   justify-content: center;
@@ -43,7 +45,7 @@
 }
 
 .tech {
-  color: #ff964f;
+  color: $color-highlight;
 }
 
 // this is fading the img out on hover

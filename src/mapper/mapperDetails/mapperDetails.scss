@@ -1,10 +1,12 @@
+@import "../../colors";
+
 .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $modal-shdow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +15,7 @@
   animation: fadeIn 0.3s forwards;
 
   .underline {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $color-text-muted;
     padding-top: 15px;
     margin-bottom: 0;
   }
@@ -42,13 +44,14 @@
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: $color-background;
+  color: $color-text;
   padding: 20px;
   width: 80%;
   max-width: 650px;
   height: fit-content;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px $modal-shdow;
   position: relative;
   z-index: 1010;
   transform: scale(0);
@@ -110,6 +113,6 @@
 
   .modal-subtitle {
     font-size: 16px;
-    color: gray;
+    color: $color-text-muted;
   }
 }
