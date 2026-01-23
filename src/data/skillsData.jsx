@@ -94,14 +94,14 @@ export const skillsBubbles = [
     theme: "node",
     category: "technical",
   },
-  {
-    id: "mongodb",
-    label: "MongoDB",
-    emoji: mongoIcon,
-    size: sizes[Math.floor(Math.random() * sizes.length)],
-    theme: "mongo",
-    category: "technical",
-  },
+  // {
+  //   id: "mongodb",
+  //   label: "MongoDB",
+  //   emoji: mongoIcon,
+  //   size: sizes[Math.floor(Math.random() * sizes.length)],
+  //   theme: "mongo",
+  //   category: "technical",
+  // },
   {
     id: "aws",
     label: "Amazon Web Services",
